@@ -14,5 +14,6 @@ logs/*
 docker/data/*
 
 !www/.gitkeep
+!docker/data/.gitkeep
 !logs/.gitkeep
 !environment/sample.env
