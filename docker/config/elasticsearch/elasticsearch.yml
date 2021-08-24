@@ -1,0 +1,4 @@
+index.number_of_shards: 2
+cluster.name: suitecrm
+node.name: intele
+bootstrap.mlockall: true

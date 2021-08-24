@@ -1,0 +1,56 @@
+version: "3.8"
+services:
+  suitecrm:
+    build: ./
+    image: suitecrm:latest
+    networks:
+      - suitecrm_net
+    volumes:
+      #SuiteCRM Application Folder
+      - ./www:/var/www/html
+      #SuiteCRM Log Folder
+      - ./logs/SuiteCRM:/var/www/html/SuiteCRM/logs
+      #PHP config
+      - ./docker/config/php/php.ini:/etc/php/7.4/apache2/php.ini
+      #APACHE config
+      - ./docker/config/apache/apache2.conf:/etc/apache2/apache2.conf
+      - ./docker/config/apache/sites.conf:/etc/apache2/sites-enabled/sites.conf
+      #APACHE Log Folder
+      - ./logs/apache:/var/log/apache2/  
+    env_file:
+      - environment/sample.env
+      #- environment/.env
+    ports:
+      - "80:80"
+    labels:
+      - me.titmus.authors="jon@titmus.me"
+
+  mysql_crm:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=suitecrm
+      - MYSQL_USER=suitecrm
+      - MYSQL_PASSWORD=suitecrm
+      - MYSQL_DATABASE=suitecrm
+    volumes:
+      - ./docker/data/mysql:/var/lib/mysql
+    networks:
+      - suitecrm_net
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql_crm
+    ports:
+      - 8181:80
+    environment:
+      - PMA_HOST=mysql_crm
+      - PMA_USER=suitecrm
+      - PMA_PASSWORD=suitecrm
+    networks:
+      - suitecrm_net
+networks:
+    suitecrm_net:
+        driver: bridge
