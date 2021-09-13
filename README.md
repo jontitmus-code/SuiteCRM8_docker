@@ -6,7 +6,7 @@
 
 3. Clone this repo
 
-4. Download and unzip SuiteCRM 8 into the www folder, ensuring to name the folder "suitecrm", you can download it from here: https://suitecrm.com/suitecrm-8-beta-preview/
+4. Download and unzip SuiteCRM 8 into the www folder, ensuring to name the folder "SuiteCRM", you can download it from here: https://suitecrm.com/suitecrm-8-beta-preview/
 > **TIP** \
 > Click the big red button that says something to the effect of "DOWNLOAD BETA X"
 
