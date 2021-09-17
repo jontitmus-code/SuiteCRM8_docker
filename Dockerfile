@@ -26,7 +26,6 @@ RUN a2enconf php7.4-fpm
 RUN apt install -y php7.4-xml php7.4-mbstring 
 RUN apt install -y zlib1g-dev libxml2-dev
 
-RUN apt-get -y install software-properties-common
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y nodejs \
     npm    
