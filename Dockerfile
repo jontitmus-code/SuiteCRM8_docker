@@ -32,7 +32,6 @@ RUN apt-get update && apt-get upgrade -y && \
 
 RUN npm install -g @angular/cli
 RUN npm install --global yarn
-RUN chown -R www-data:www-data /var/www/html/SuiteCRM/
 
 CMD ["apachectl", "-D", "FOREGROUND"]
 
