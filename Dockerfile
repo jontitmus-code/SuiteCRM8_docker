@@ -18,17 +18,17 @@ RUN apt-get -y update
 RUN apt-get install -y php7.4 libapache2-mod-php7.4
 RUN apt-get install -y php7.4-fpm libapache2-mod-fcgid
 RUN apt-get install -y php7.4-mysql
-RUN apt-get install -y php7.4-curl php7.4-intl php7.4-zip php7.4-imap
+RUN apt-get install -y php7.4-curl php7.4-intl php7.4-zip php7.4-imap php7.4-gd
 
 RUN a2enmod rewrite
 RUN a2enconf php7.4-fpm
 
-RUN apt install -y php7.4-xml php7.4-mbstring 
+RUN apt install -y php7.4-xml php7.4-mbstring
 RUN apt install -y zlib1g-dev libxml2-dev
 
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y nodejs \
-    npm    
+    npm
 
 RUN npm install -g @angular/cli
 RUN npm install --global yarn

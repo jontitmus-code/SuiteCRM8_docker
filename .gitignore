@@ -6,7 +6,7 @@ Thumbs.db
 .buildpath
 vendor/.git
 .env*.php*
-
+.idea
 
 environment/*
 www/*
