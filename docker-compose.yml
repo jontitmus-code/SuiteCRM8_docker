@@ -17,6 +17,8 @@ services:
       - ./docker/config/apache/sites.conf:/etc/apache2/sites-enabled/sites.conf
       #APACHE Log Folder
       - ./logs/apache:/var/log/apache2/  
+      #PHP Log Folder
+      - ./logs/php:/var/log/php/
     env_file:
       - environment/sample.env
       #- environment/.env
