@@ -28,3 +28,8 @@ and wait for images to be pulled and containers to be created
 
 
 
+
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)
