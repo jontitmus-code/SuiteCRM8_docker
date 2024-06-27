@@ -22,10 +22,11 @@ and wait for images to be pulled and containers to be created
 >`you@yourpc#docker exec -it suitecrm-suitecrm-1 /bin/bash`\
 >`root@your_container#openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt`
 
-6. Installation is now handled through the application itself and can be reached at `http://localhost:8080` or `https://localhost:8081` dependent on your setup.\ Variables for setup can be found below:
+6. Installation is now handled through the application itself and can be reached at `http://localhost:8080` or `https://localhost:8081` dependent on your setup.
+   Variables for setup can be found below:
 * URL: localhost
 * SuiteCRM Database User: suitecrm [can be changed in `./docker-compose.yml`]
-* SuiteCRM Database User Password: suitecrm [can be hanged in `./docker-compose.yml`]
+* SuiteCRM Database User Password: suitecrm [can be changed in `./docker-compose.yml`]
 * Host Name: mysql_crm
 * Database Name: suitecrm
 * Database Port:3306
@@ -33,7 +34,7 @@ and wait for images to be pulled and containers to be created
 * SuiteCRM Admin User Password: your choice!
 
 >**TIP** (db admin)\
->Along with the Web Server and MYSQL, you will also find phpMyAdmin running at `http://localhost:8181` \
+>Along with the Web Server and MYSQL, you will also find phpMyAdmin running at `http://localhost:8181`
 
 > **REMEMBER** (Production environments) \
 >For a non test/local environment don't forget to change the username and password of the admin user to something that only you know and can remember!
