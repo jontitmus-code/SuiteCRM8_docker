@@ -13,8 +13,8 @@ from root folder created when the repo is cloned,
 and wait for images to be pulled and containers to be created
 
 5. Apache server will be listening on: 
-* localport 8080 linked to port 80 (`http://localhost`), and 
-* localport 8081 linked to port 443 (`https://localhost`)
+* localport 8080 linked to port 80 (`http://localhost:8080`), and 
+* localport 8081 linked to port 443 (`https://localhost:8081`)
 >**NOTE** (https) \
 >Until you replace `./docker/config/apache/apache-selfsigned.crt` and `./docker/config/apache/apache-selfsigned.key` files with a certificate and key, and then uncomment the `VirtualHost *:443` and its children in the `./docker/config/apache/sites.conf` file, https will not point anywhere and will not work.
 >You will need to restart your containers once you have made the necessary changes for them to take affect.\
