@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   suitecrm:
     build: ./
@@ -15,15 +14,17 @@ services:
       #APACHE config
       - ./docker/config/apache/apache2.conf:/etc/apache2/apache2.conf
       - ./docker/config/apache/sites.conf:/etc/apache2/sites-enabled/sites.conf
+      - ./docker/config/apache/apache-selfsigned.crt:/etc/ssl/certs/apache-selfsigned.crt
+      - ./docker/config/apache/apache-selfsigned.key:/etc/ssl/private/apache-selfsigned.key
       #APACHE Log Folder
       - ./logs/apache:/var/log/apache2/  
       #PHP Log Folder
       - ./logs/php:/var/log/php/
     env_file:
       - environment/sample.env
-      #- environment/.env
     ports:
-      - "80:80"
+      - "8080:80"
+      - "8081:443"
     labels:
       - me.titmus.authors="jon@titmus.me"
 
