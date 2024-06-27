@@ -39,7 +39,7 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN npm install -g @angular/cli
 RUN npm install --global yarn
 
-#RUN find . -exec chown www-data:www-data {} \;
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 CMD ["apachectl", "-D", "FOREGROUND"]
 
