@@ -33,7 +33,7 @@ and wait for images to be pulled and containers to be created
 * SuiteCRM Admin User Password: your choice!
 
 >**TIP** (db admin)\
->Along with the Web Server and MYSQL, you will also find phpMyAdmin running at `http://localhost:8181`\
+>Along with the Web Server and MYSQL, you will also find phpMyAdmin running at `http://localhost:8181` \
 
 > **REMEMBER** (Production environments) \
 >For a non test/local environment don't forget to change the username and password of the admin user to something that only you know and can remember!
