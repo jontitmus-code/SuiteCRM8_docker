@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:22.04
+FROM ubuntu:22.04
 #Ubuntu 22.04 supported until APR 2032 - https://ubuntu.com/about/release-cycle
 #PHP 8.2 supported until 31 Dec 2026 - https://www.php.net/supported-versions.php
 LABEL org.opencontainers.image.authors="jon@titmus.me"
@@ -42,7 +42,9 @@ RUN npm install --global yarn
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
-#RUN find . -exec chown www-data:www-data {} \;
+WORKDIR /var/www/html/
+RUN chown -R www-data:www-data .
+RUN chmod -R 755 .
 
 CMD ["apachectl", "-D", "FOREGROUND"]
 
