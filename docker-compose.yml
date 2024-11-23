@@ -7,6 +7,8 @@ services:
     volumes:
       #SuiteCRM Application Folder
       - ./www:/var/www/html
+        #env File
+      - ./environment/.env:/var/www/html/SuiteCRM/.env
       #SuiteCRM Log Folder
       - ./logs/SuiteCRM:/var/www/html/SuiteCRM/logs
       - ./logs/SuiteCRM_Core/suitecrm.log:/var/www/SuiteCRM/public/legacy/suitecrm.log

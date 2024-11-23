@@ -42,6 +42,9 @@ RUN npm install --global yarn
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
+# Disable default site and enable custom site
+RUN a2dissite 000-default.conf
+
 WORKDIR /var/www/html/
 RUN chown -R www-data:www-data .
 RUN chmod -R 755 .
