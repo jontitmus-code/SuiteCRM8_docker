@@ -2,7 +2,7 @@
 This branch now fully initialises by itself on initial start unless the `VERSION` file exists in the `/SuiteCRM` directory.
 This includes auto creation of self-signed certs.
 
-This is branch is recommended for first time users or someone looking to test SuiteCRM.
+This branch is recommended for first time users or someone looking to test SuiteCRM.
 For a more traditional Compose image, I would recommend looking at the `clean` branch of this repo.
 
 # Docker Image for SuiteCRM 8
