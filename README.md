@@ -16,8 +16,10 @@ For a more traditional Compose image, I would recommend looking at the `clean` b
 4. Run `docker-compose up -d`
 from root folder created when the repo is cloned,
 and wait for images to be pulled and containers to be created
+> **TIP**
+> Using `docker compose up` for first-time start-up will give you visibility of the setup process and therefore any failures to initialise.
 
-5. Apache server will be listening on: 
+6. Apache server will be listening on: 
 * localport 8080 linked to port 80 (`http://localhost:8080`), and 
 * localport 8081 linked to port 443 (`https://localhost:8081`)
 
