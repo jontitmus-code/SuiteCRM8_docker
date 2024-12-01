@@ -1,3 +1,6 @@
+# Branch: Clean
+This version does not auto initialise. For a fully automatic initialisation of SuiteCRM and Apache use the master branch from this repo.
+
 # Docker Image for SuiteCRM 8
 
 1. Install Docker 26.1.4 or later, alternatively Install Docker Desktop where available and skip to 3
