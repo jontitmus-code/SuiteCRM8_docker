@@ -49,6 +49,9 @@ WORKDIR /var/www/html/
 RUN chown -R www-data:www-data .
 RUN chmod -R 755 .
 
-CMD ["apachectl", "-D", "FOREGROUND"]
+RUN apt-get install -y zip wget
+
+#CMD ["apachectl", "-D", "FOREGROUND"]
+CMD sh startup.sh
 
 EXPOSE 80 443
