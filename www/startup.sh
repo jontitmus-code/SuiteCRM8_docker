@@ -17,12 +17,8 @@ if ! [ -f SuiteCRM/VERSION ];
   then
     do_init
 fi
-  
-if [stat -c "%U %G"] != "www-data www-data"
-  then
     chown -R www-data:www-data .
     echo "Permissions set"
-  fi
 
       echo "starting Apache server"
      
