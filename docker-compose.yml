@@ -26,6 +26,7 @@ services:
     ports:
       - "8080:80"
       - "8081:443"
+    restart: on-failure
     labels:
       - me.titmus.authors="jon@titmus.me"
 
@@ -42,6 +43,7 @@ services:
       - ./docker/data/mysql:/var/lib/mysql
     networks:
       - suitecrm_net
+    restart: on-failure
   
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -55,6 +57,7 @@ services:
       - PMA_PASSWORD=suitecrm
     networks:
       - suitecrm_net
+    restart: no
 networks:
     suitecrm_net:
         driver: bridge
