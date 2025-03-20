@@ -9,7 +9,7 @@ services:
       - ./www:/var/www/html
       #SuiteCRM Log Folder
       - ./logs/SuiteCRM:/var/www/html/SuiteCRM/logs
-      - ./logs/SuiteCRM_Core/suitecrm.log:/var/www/SuiteCRM/public/legacy/suitecrm.log
+      - ./logs/SuiteCRM_Core/suitecrm.log:/var/www/html/SuiteCRM/public/legacy/suitecrm.log
       #PHP config
       - ./docker/config/php/php.ini:/etc/php/8.2/apache2/php.ini
       #APACHE config
